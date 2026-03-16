@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mansi Ghetiya | Senior Backend Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,87 +25,128 @@ color:#333;
 
 .container{
 display:flex;
-min-height:100vh;
 }
 
 /* SIDEBAR */
 
 .sidebar{
 width:320px;
-background:#2d3e50;
+background:#1f2937;
 color:white;
+min-height:100vh;
 padding:40px 30px;
 position:fixed;
-height:100%;
 }
 
-.sidebar h1{
-font-size:26px;
-margin-bottom:5px;
-}
-
-.sidebar p{
-font-size:14px;
-opacity:0.8;
-margin-bottom:25px;
-}
-
-.sidebar section{
+.profile{
+text-align:center;
 margin-bottom:30px;
 }
 
-.sidebar h3{
+.profile img{
+width:120px;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+.profile h1{
+font-size:24px;
+}
+
+.profile p{
 font-size:14px;
+opacity:0.8;
+}
+
+.contact{
+font-size:13px;
+line-height:1.7;
+margin-top:20px;
+}
+
+.sidebar section{
+margin-top:30px;
+}
+
+.sidebar h3{
+font-size:13px;
 text-transform:uppercase;
+letter-spacing:1px;
 margin-bottom:10px;
 opacity:0.8;
 }
 
 .sidebar ul{
 list-style:none;
+font-size:14px;
 }
 
 .sidebar li{
-font-size:14px;
 margin-bottom:6px;
 }
 
-.contact{
+/* SKILL BAR */
+
+.skill{
+margin-bottom:12px;
+}
+
+.skill span{
 font-size:13px;
-line-height:1.6;
+}
+
+.bar{
+height:6px;
+background:#374151;
+margin-top:4px;
+border-radius:4px;
+}
+
+.fill{
+height:6px;
+background:#60a5fa;
+border-radius:4px;
 }
 
 /* MAIN CONTENT */
 
 .content{
 margin-left:320px;
-padding:50px;
+padding:60px;
 max-width:900px;
 }
 
 section{
-margin-bottom:45px;
+margin-bottom:50px;
 }
 
-section h2{
-font-size:22px;
+h2{
+font-size:24px;
 margin-bottom:15px;
 border-bottom:2px solid #eee;
 padding-bottom:6px;
 }
 
+p{
+line-height:1.6;
+font-size:15px;
+}
+
+/* EXPERIENCE */
+
 .job{
-margin-bottom:25px;
+margin-bottom:30px;
 }
 
 .job-title{
 font-weight:600;
+font-size:16px;
 }
 
 .company{
-font-size:14px;
-color:#777;
-margin-bottom:8px;
+font-size:13px;
+color:#666;
+margin-bottom:10px;
 }
 
 ul{
@@ -111,13 +155,65 @@ font-size:14px;
 line-height:1.6;
 }
 
-.project{
-margin-bottom:20px;
+/* PROJECT CARDS */
+
+.projects{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
 }
 
-.project strong{
-display:block;
-margin-bottom:5px;
+.project{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.project h4{
+margin-bottom:8px;
+}
+
+/* BUTTON */
+
+.button{
+display:inline-block;
+margin-top:15px;
+background:#2563eb;
+color:white;
+padding:10px 16px;
+border-radius:6px;
+text-decoration:none;
+font-size:14px;
+}
+
+.button:hover{
+background:#1d4ed8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.sidebar{
+position:relative;
+width:100%;
+min-height:auto;
+}
+
+.content{
+margin-left:0;
+padding:30px;
+}
+
+.container{
+flex-direction:column;
+}
+
+.projects{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -128,52 +224,57 @@ margin-bottom:5px;
 
 <div class="container">
 
+<!-- SIDEBAR -->
+
 <div class="sidebar">
 
+<div class="profile">
+
+<img src="https://i.pravatar.cc/150?img=5">
+
 <h1>Mansi Ghetiya</h1>
+
 <p>Senior Backend Engineer</p>
 
-<section class="contact">
+</div>
 
-📍 Ahmedabad, Gujarat<br>
-📞 +91 9824344253<br>
-✉ mansipatel.rk@gmail.com<br>
-🔗 linkedin.com/in/mansi-ghetiya-04592113b
+<div class="contact">
 
-</section>
+📍 Ahmedabad, India <br>
+📞 +91 9824344253 <br>
+✉ mansipatel.rk@gmail.com <br>
+🔗 LinkedIn
+
+</div>
 
 <section>
 
 <h3>Skills</h3>
 
-<ul>
-<li>PHP</li>
-<li>Laravel</li>
-<li>REST APIs</li>
-<li>Microservices</li>
-<li>MySQL</li>
-<li>Query Optimization</li>
-<li>Data Modeling</li>
-<li>WordPress</li>
-<li>JavaScript</li>
-<li>Docker (Basic)</li>
-<li>AWS S3</li>
-</ul>
+<div class="skill">
+<span>PHP / Laravel</span>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
 
-</section>
+<div class="skill">
+<span>MySQL</span>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
 
-<section>
+<div class="skill">
+<span>REST APIs</span>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
 
-<h3>Integrations</h3>
+<div class="skill">
+<span>WordPress</span>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
 
-<ul>
-<li>Stripe</li>
-<li>PayPal</li>
-<li>Salesforce</li>
-<li>Google Calendar API</li>
-<li>MailChimp</li>
-<li>Klaviyo</li>
-</ul>
+<div class="skill">
+<span>Docker</span>
+<div class="bar"><div class="fill" style="width:60%"></div></div>
+</div>
 
 </section>
 
@@ -182,15 +283,19 @@ margin-bottom:5px;
 <h3>Languages</h3>
 
 <ul>
+
 <li>English</li>
 <li>Hindi</li>
 <li>Gujarati</li>
+
 </ul>
 
 </section>
 
 </div>
 
+
+<!-- CONTENT -->
 
 <div class="content">
 
@@ -199,9 +304,12 @@ margin-bottom:5px;
 <h2>Professional Summary</h2>
 
 <p>
-Senior Backend Software Engineer with 7+ years of experience designing scalable backend systems using PHP and Laravel. 
-Experienced in REST API development, MySQL performance optimization, and distributed backend architectures powering POS platforms, loyalty systems, and e-commerce applications.
+
+Senior Backend Software Engineer with 7+ years of experience building scalable backend systems using PHP and Laravel. Experienced in REST API development, MySQL optimization, and distributed architectures powering POS platforms, loyalty systems, and e-commerce applications.
+
 </p>
+
+<a class="button" href="#">Download Resume</a>
 
 </section>
 
@@ -213,27 +321,38 @@ Experienced in REST API development, MySQL performance optimization, and distrib
 <div class="job">
 
 <div class="job-title">Senior Software Engineer</div>
-<div class="company">ScaleTech Solutions — Feb 2026 – Present</div>
+
+<div class="company">
+ScaleTech Solutions — Feb 2026 – Present
+</div>
 
 <ul>
-<li>Develop Laravel backend services for enterprise POS platforms.</li>
-<li>Design modular backend components improving maintainability.</li>
-<li>Build REST APIs for communication between microservices and POS systems.</li>
-<li>Resolve production issues affecting provisioning workflows.</li>
+
+<li>Develop Laravel backend services for enterprise POS platforms</li>
+<li>Design modular backend components improving maintainability</li>
+<li>Build REST APIs for communication between microservices</li>
+<li>Investigate and resolve production issues</li>
+
 </ul>
 
 </div>
 
+
 <div class="job">
 
 <div class="job-title">Software Engineer</div>
-<div class="company">FTx Infotech Pvt. Ltd — Oct 2022 – Jan 2026</div>
+
+<div class="company">
+FTx Infotech Pvt Ltd — Oct 2022 – Jan 2026
+</div>
 
 <ul>
-<li>Developed backend modules for multi-store loyalty platform.</li>
-<li>Built REST APIs supporting loyalty transactions and reward redemption.</li>
-<li>Implemented campaign management and customer systems.</li>
-<li>Optimized MySQL queries improving reporting performance by ~40%.</li>
+
+<li>Developed backend modules for multi-store loyalty platform</li>
+<li>Built REST APIs supporting loyalty transactions</li>
+<li>Implemented campaign management systems</li>
+<li>Optimized MySQL queries improving reporting performance by ~40%</li>
+
 </ul>
 
 </div>
@@ -242,13 +361,17 @@ Experienced in REST API development, MySQL performance optimization, and distrib
 <div class="job">
 
 <div class="job-title">PHP Developer</div>
-<div class="company">The One Technologies — Jan 2019 – Aug 2022</div>
+
+<div class="company">
+The One Technologies — Jan 2019 – Aug 2022
+</div>
 
 <ul>
-<li>Delivered 20+ WordPress and WooCommerce websites.</li>
-<li>Built custom backend modules and APIs.</li>
-<li>Integrated Stripe payments and Salesforce APIs.</li>
-<li>Designed optimized MySQL schemas improving performance.</li>
+
+<li>Delivered 20+ WordPress and WooCommerce websites</li>
+<li>Built custom backend modules and APIs</li>
+<li>Integrated Stripe payments and Salesforce APIs</li>
+
 </ul>
 
 </div>
@@ -260,12 +383,16 @@ Experienced in REST API development, MySQL performance optimization, and distrib
 
 <h2>Projects</h2>
 
+<div class="projects">
+
 <div class="project">
 
-<strong>POSBill — POS Management Platform</strong>
+<h4>POSBill</h4>
 
 <p>
-Backend microservices for POS machine provisioning and license lifecycle management with Docker and Kubernetes.
+
+Backend microservices for POS machine provisioning and license lifecycle management using Docker and Kubernetes.
+
 </p>
 
 </div>
@@ -273,10 +400,12 @@ Backend microservices for POS machine provisioning and license lifecycle managem
 
 <div class="project">
 
-<strong>Loyal n Save — Customer Loyalty Platform</strong>
+<h4>Loyal n Save</h4>
 
 <p>
-Backend services for multi-store loyalty programs and reward management with optimized MySQL queries.
+
+Multi-store loyalty platform with reward management and optimized MySQL queries.
+
 </p>
 
 </div>
@@ -284,11 +413,28 @@ Backend services for multi-store loyalty programs and reward management with opt
 
 <div class="project">
 
-<strong>Outbound Sailing — Booking Platform</strong>
+<h4>Broscode</h4>
 
 <p>
-Google Calendar API integration enabling real-time course scheduling and booking management.
+
+Emergency medical information system with QR-code based patient access.
+
 </p>
+
+</div>
+
+
+<div class="project">
+
+<h4>Outbound Sailing</h4>
+
+<p>
+
+Course booking system integrated with Google Calendar API.
+
+</p>
+
+</div>
 
 </div>
 
@@ -300,11 +446,19 @@ Google Calendar API integration enabling real-time course scheduling and booking
 <h2>Education</h2>
 
 <p>
-B.E. Information Technology — B.H. Gardi Institute of Engineering & Technology
+
+B.E. Information Technology  
+B.H. Gardi Institute of Engineering & Technology
+
 </p>
 
+<br>
+
 <p>
-Diploma in Information Technology — Government Polytechnic Rajkot
+
+Diploma in Information Technology  
+Government Polytechnic Rajkot
+
 </p>
 
 </section>
